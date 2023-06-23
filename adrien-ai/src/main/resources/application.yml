@@ -1,0 +1,9 @@
+server:
+  port: 2000
+
+spring:
+  # 允许重复的Bean
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: adrien-ai
