@@ -1,4 +1,4 @@
-package org.adrien.ai.controller;
+package org.adrien.ai.service;
 
 import org.adrien.ai.pojo.qu.AiChatQu;
 import org.adrien.sdk.web.pojo.vo.BaseVo;

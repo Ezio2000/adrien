@@ -1,5 +1,6 @@
-package org.adrien.ai.controller;
+package org.adrien.ai.gateway;
 
+import org.adrien.ai.configuration.AiConfiguration;
 import org.adrien.ai.pojo.qu.AiQu;
 import org.adrien.sdk.web.service.RestTemplateProxy;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,14 @@ public class AiGateway {
     @Autowired
     private RestTemplateProxy<AiQu, String> restTemplateProxy;
 
+    @Autowired
+    private AiConfiguration aiConfiguration;
+
     public String aiChat(AiQu qu) {
         return restTemplateProxy.post(
                 "https://api.openai.com/v1/chat/completions",
                 new HttpHeaders() {
-                    { add("Authorization", "Bearer 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"); }
+                    { add("Authorization", aiConfiguration.getApiKey()); }
                     { add("Content-Type", "application/json"); }
                 },
                 qu,

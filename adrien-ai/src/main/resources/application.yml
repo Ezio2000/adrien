@@ -7,3 +7,7 @@ spring:
     allow-bean-definition-overriding: true
   application:
     name: adrien-ai
+
+ai:
+  enable: true
+  api-key: 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

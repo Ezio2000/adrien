@@ -1,6 +1,7 @@
 package org.adrien.ai.controller;
 
 import org.adrien.ai.pojo.qu.AiChatQu;
+import org.adrien.ai.service.AiService;
 import org.adrien.sdk.web.pojo.vo.BaseVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
